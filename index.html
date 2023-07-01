@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/489c4abe26.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #000;
+        }
+
+        main , footer {
+            background: rgb(18, 18, 18);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="nav mb-4">
+        <div class="flex items-center justify-around bg-teal-500 h-20">
+            <h1><a href="#" class="w-1/3 lg:text-4xl">Gobinda</a></h1>
+            <ul class="w-1/3 flex items-center justify-evenly">
+                <li><a href="#" class="text-xl">Home</a></li>
+                <li><a href="#" class="text-xl">About</a></li>
+                <li><a href="#" class="text-xl">Contact me</a></li>
+            </ul>
+        </div>
+    </div> -->
+    <main class="lg:w-3/4 w-5/6 h-full m-auto mt-4 mb-4 rounded-xl">
+        <section class="first flex justify-center items-start  ">
+            <div class="left w-1/3 h-full hidden sm:block">
+                <div class="profile flex justify-center items-start ">
+                    <img src="pic.jpg" alt="Profile Picture" class="rounded-full lg:p-4 lg:h-80 lg:w-80 hidden sm:block ">
+                </div>
+            </div>
+            <div class="right lg:w-2/3 lg:h-full p-10">
+                <img src="pic.jpg" alt="Profile Picture" class="rounded-full w-40 h-40 lg:p-4 lg:h-80 lg:w-80 lg:hidden m-4">
+                <h1 class="text-2xl lg:text-5xl text-white text-teal-500 ">Gobinda Prasad</h1>
+                <p class="text-6xl mb-2 text-teal-500 lg:text-8xl text-2xl ">Poudel</p>
+                <span class="text-xl mb-2 text-white lg:text-3xl">I am a <span id="text"></span></span>
+                <p class="text-base mb-2 lg:text-xl text-white mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
+                    similique
+                    beatae amet earum maxime aliquid eaque corporis deleniti illo fugit!</p>
+
+                <a href="cv.docx" class="text-white text-xl p-3 lg:p-4 lg:text-2xl rounded-xl bg-teal-500 hover:bg-teal-700"
+                    download>Download Resume</a>
+            </div>
+        </section>
+        <section class="second w-full mt-7">
+            <div class="lg:pr-20 flex justify-center items-center lg:flex-row lg:flex-wrap flex-col lg:pl-20 ">
+                <!-- <div class="expertise flex justify-center items-start flex-col w-1/2">
+                    <p class="text-teal-500 lg:text-4xl text-2xl">Expertise :</p>
+                    <ul class="text-white list-disc ">
+                        <li class="p-2 lg:text-2xl">HTML</li>
+                        <li class="p-2 lg:text-2xl">CSS</li>
+                        <li class="p-2 lg:text-2xl">JS</li>
+                        <li class="p-2 lg:text-2xl">React</li>
+                    </ul>
+                </div> -->
+                <div class="projects  flex justify-center items-start flex-col lg:w-1/2">
+                    <p class="text-teal-500 lg:text-4xl text-2xl">Expertise</p>
+                    <div class="mb-10 p-2">
+                        <p class="text-white lg:text-2xl text-xl">HTML</p>
+                        <span class="text-gray-500 lg:text-xl">Hyper Text Mark Language</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <p class="text-white lg:text-2xl text-xl">CSS</p>
+                        <span class="text-gray-500 lg:text-xl">Cas Cading Styles Sheet</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <p class="text-white lg:text-2xl text-xl">JS</p>
+                        <span class="text-gray-500 lg:text-xl">Javascript</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <p class="text-white lg:text-2xl text-xl">Nothing</p>
+                        <span class="text-gray-500 lg:text-xl">Project description</span>
+                    </div>
+                </div>
+                <div class="education  flex justify-center items-start flex-col lg:w-1/2 w-full ml-7 sm:ml-0">
+                    <p class="text-teal-500 lg:text-4xl text-2xl">Education</p>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Secondary Education Examination (SEE)</p>
+                        <span class="text-gray-500 lg:text-xl">Hamro Pahunch Secondary School</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Secondary Education Examination (SEE)</p>
+                        <span class="text-gray-500 lg:text-xl">Hamro Pahunch Secondary School</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Secondary Education Examination (SEE)</p>
+                        <span class="text-gray-500 lg:text-xl">Hamro Pahunch Secondary School</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Secondary Education Examination (SEE)</p>
+                        <span class="text-gray-500 lg:text-xl">Hamro Pahunch Secondary School</span>
+                    </div>
+                </div>
+                <div class="projects  flex justify-center items-start flex-col lg:w-1/2">
+                    <p class="text-teal-500 lg:text-4xl text-2xl">Projects</p>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Project 1</p>
+                        <span class="text-gray-500 lg:text-xl">Project description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Project 2</p>
+                        <span class="text-gray-500 lg:text-xl">Project description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Project 3</p>
+                        <span class="text-gray-500 lg:text-xl">Project description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Project 4</p>
+                        <span class="text-gray-500 lg:text-xl">Project description</span>
+                    </div>
+                </div>
+                <div class="experience  flex justify-center items-start flex-col lg:w-1/2">
+                    <p class="text-teal-500 lg:text-4xl text-2xl">Experience</p>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Experience 1</p>
+                        <span class="text-gray-500 lg:text-xl">Experience description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Experience 2</p>
+                        <span class="text-gray-500 lg:text-xl">Experience description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Experience 3</p>
+                        <span class="text-gray-500 lg:text-xl">Experience description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Experience 4</p>
+                        <span class="text-gray-500 lg:text-xl">Experience description</span>
+                    </div>
+                </div>
+
+                <div class="achievements  flex justify-center items-start flex-col lg:w-1/2">
+                    <p class="text-teal-500 lg:text-4xl text-2xl">Achievements</p>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Achievement 1</p>
+                        <span class="text-gray-500 lg:text-xl">Achievement description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Achievement 2</p>
+                        <span class="text-gray-500 lg:text-xl">Achievement description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Achievement 3</p>
+                        <span class="text-gray-500 lg:text-xl">Achievement description</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <span class="text-gray-500">Date</span>
+                        <p class="text-white lg:text-2xl text-xl">Achievement 4</p>
+                        <span class="text-gray-500 lg:text-xl">Achievement description</span>
+                    </div>
+                </div>
+                <div class="interests  flex justify-center items-start flex-col lg:w-1/2">
+                    <p class="text-teal-500 lg:text-4xl text-2xl">Interests</p>
+                    
+                    
+
+
+                    <div class="mb-10 p-2">
+                        <p class="text-white lg:text-2xl text-xl"><i class="fas fa-music"></i></p>
+                        <span class="text-gray-500 lg:text-xl">Music</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <p class="text-white lg:text-2xl text-xl"><i class="fas fa-plane"></i></p>
+                        <span class="text-gray-500 lg:text-xl">Travelling</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <p class="text-white lg:text-2xl text-xl"><i class="far fa-futbol"></i></p>
+                        <span class="text-gray-500 lg:text-xl">Playing Sports</span>
+                    </div>
+                    <div class="mb-10 p-2">
+                        <p class="text-white lg:text-2xl text-xl"><i class="fas fa-tools"></i></p>
+                        <span class="text-gray-500 lg:text-xl">Making DIY Projects</span>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="w-full h-60 lg:p-8 ">
+        <div class="flex items-center justify-around flex-col lg:flex-row sm:pb-4 ">
+            <div class="contact flex items-center justify-center flex-col">
+                <p class="lg:text-4xl text-white">Contact</p>
+                <p class="m-1 lg:text-xl text-white">Tulsipur , Dang</p>
+                <p class="m-1 lg:text-xl text-white"><a href="mailto:gobindapoudelofficial@gmail.com">gobindapoudelofficial@gmail.com</a></p>
+                
+            </div>
+            <div class="social flex items-center justify-center flex-col">
+                <p class="lg:text-4xl text-white mt-2">Social Links</p>
+                <a href="https://www.instagram.com/ram0917q/" target="_blank" class="lg:text-xl hover:text-teal-500 text-white lg:mt-2">Instagram</a>
+                <a href="https://github.com/Gobinda-Prasad-Poudel" target="_blank" class="lg:text-xl hover:text-teal-500 text-white lg:mt-2">Github</a>
+                <a href="https://www.linkedin.com/in/gobinda-prasad-poudel-aa9485218/" target="_blank" class="lg:text-xl hover:text-teal-500 text-white lg:mt-2">Linkedin</a>
+                <a href="https://www.upwork.com/freelancers/gobindaprasadp" target="_blank" class="lg:text-xl hover:text-teal-500 text-white lg:mt-2">Upwork</a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const words = [
+            "Developer",
+            "Logo Designer",
+            "Frontend Developer"
+        ];
+
+        let currentWordIndex = 0;
+        let currentWord = "";
+        let isDeleting = false;
+        let typingSpeed = 200; // Adjust the typing speed as desired
+        let delayTime = 200; // Adjust the delay time between words as desired
+        let textElement = document.getElementById("text");
+
+        function type() {
+            const fullWord = words[currentWordIndex];
+
+            if (isDeleting) {
+                currentWord = fullWord.substring(0, currentWord.length - 1);
+            } else {
+                currentWord = fullWord.substring(0, currentWord.length + 1);
+            }
+
+            textElement.innerHTML = currentWord;
+
+            if (!isDeleting && currentWord === fullWord) {
+                isDeleting = true;
+                typingSpeed = delayTime;
+            } else if (isDeleting && currentWord === "") {
+                isDeleting = false;
+                currentWordIndex++;
+                typingSpeed = 200;
+                if (currentWordIndex === words.length) {
+                    currentWordIndex = 0;
+                }
+            }
+
+            setTimeout(type, typingSpeed);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(type, delayTime);
+        });
+    </script>
+</body>
+
+</html>
