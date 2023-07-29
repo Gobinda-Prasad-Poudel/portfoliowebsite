@@ -4,273 +4,776 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home - Welcome</title>
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Icons -->
+    <!-- Boxixons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Google Fonts - Poppins -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+    </style>
+
+    <!-- Swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Font awsome -->
     <script src="https://kit.fontawesome.com/489c4abe26.js" crossorigin="anonymous"></script>
-    <title>Home</title>
+
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
 
-        body {
-            background: #000;
-        }
+.swiper {
+    width: 600px;
+    height: 300px;
+}
 
-        main , footer {
-            background: rgb(18, 18, 18);
-        }
+:root {
+    --bg-color: #000;
+    --bg-skills-color: #FEFEFE;
+    --secondary-bg-color: #0DB760;
+    --third-bg-color: #eef3f0;
+    --bg-hover-color: #0db75f7c;
+    --primary-color: #fff;
+    --secondary-color: #fff;
+    --primary-text-color: #323433;
+    --secondary-text-color: #fff;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+section {
+    margin: 100px 0 100px 0;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin-top: 10px;
+    padding: 0 40px 0 40px;
+}
+
+header a {
+    margin-right: 20px;
+    font-size: 1rem;
+    color: var(--primary-text-color);
+    position: relative;
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--secondary-bg-color);
+    left: 0;
+    bottom: -5px;
+    border-radius: 20px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+header a:hover {
+    color: var(--secondary-bg-color);
+}
+
+header a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.main_txt {
+    color: var(--secondary-bg-color);
+}
+
+
+/* Main section */
+.main-sec {
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-template-rows: repeat(1, 100%);
+    grid-template-columns: repeat(2, 50%);
+    border: 1px var(--bg-color);
+    padding: 0 80px;
+    margin: 40px 0 0 0;
+}
+
+.item1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h5 {
+    color: var(--secondary-bg-color);
+    font-weight: 100;
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+}
+
+.main-h1 {
+    font-size: 3rem;
+}
+
+.main-h1 span {
+    color: var(--secondary-bg-color);
+}
+
+/* Buttons */
+.btns {
+    margin: 10px 0 0 0;
+}
+
+.btns button {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    background: var(--secondary-bg-color);
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+
+
+}
+
+.btn-1 {
+    margin: 10px 20px 0 0;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    background: var(--secondary-bg-color);
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+}
+
+/* Second section */
+.second-sec {
+    width: 100%;
+    padding: 10px 60px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: repeat(2, 50%);
+    margin: 100px 0;
+    grid-gap: 20px;
+}
+
+.second-sec .main {
+    grid-row: 1/-1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+
+.main-h1 {
+    color: var(--bg-color);
+    font-size: 2.6rem;
+}
+
+.main-h1 span {
+    color: var(--secondary-bg-color);
+}
+
+.second-sec .main p {
+    color: var(--primary-text-color);
+
+}
+
+.icon svg {
+    width: 40px;
+}
+
+.icon i {
+    font-size: 2rem;
+}
+
+.skills {
+    background: var(--third-bg-color);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.5s;
+}
+
+.skills:hover {
+    background: var(--secondary-bg-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transform: translateY(-16px);
+
+}
+
+.icon .svgs {
+    color: var(--bg-skills-color);
+}
+
+.skills:hover .svgs {
+    color: var(--primary-color);
+}
+
+/* Third section */
+.third-sec {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    padding: 0 40px;
+
+}
+
+.third-sec .main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-h1 {
+    font-size: 2.6rem;
+
+}
+
+.main-h1 span {
+    color: var(--secondary-bg-color);
+}
+
+.third-sec .main p {
+    color: var(--primary-text-color);
+}
+
+.projects {
+    overflow: hidden;
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 12px;
+
+}
+
+/* Contact */
+.contact {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 100px 0;
+
+}
+
+.contact-info-form {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 20px;
+
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left p {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.left div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 30px 0;
+}
+
+.left div .sv {
+    grid-row: 1 / -1;
+
+}
+
+.right form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-columns: 0.5fr 0.5fr;
+}
+
+.right form textarea {
+    grid-column: 1 / -1;
+}
+
+form {
+    padding: 20px;
+}
+
+form input {
+    padding: 10px;
+    margin: 0 10px 10px 0;
+    border-radius: 10px;
+    border: 2px solid var(--primary-text-color);
+
+}
+
+form input:focus {
+    border: 2px solid var(--secondary-bg-color);
+    outline: none;
+    background: var(--bg-hover-color);
+
+}
+
+form textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-text-color);
+
+}
+
+form textarea:focus {
+    border: 2px solid var(--secondary-bg-color);
+    outline: none;
+    background: var(--bg-hover-color);
+
+}
+
+form button {
+    width: 120px;
+}
+
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100px;
+    background: var(--secondary-bg-color);
+    align-items: center;
+    justify-content: center;
+}
+
+.links {
+    margin: 0 0 0 20px;
+}
+
+.copyright {
+    font-size: 1.5rem;
+}
+
+.top-btn {
+    font-size: 2rem;
+}
+
+footer .links p {
+    font-size: 1.1rem;
+}
+
+footer .links i {
+    font-size: 3rem;
+    margin: 0 10px;
+}
+
+/* Media Queries */
+
+
+/* Default styles for all devices */
+
+/* Tablets */
+/* Media query for tablets with a minimum width of 768px and a maximum width of 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    main {
+        display: none;
+    }
+    .msg{
+        display: block;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    
+    main {
+        display: none;
+    }
+    .msg{
+        display: block;
+    }
+}
+
+
+.msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin: 10px 20px;
+}
+
+.msg h1{
+    font-size: 2rem;
+
+}
+
+.msg p{
+    color: var(--primary-color);
+}
     </style>
+    
 </head>
 
 <body>
-    <!-- <div class="nav mb-4">
-        <div class="flex items-center justify-around bg-teal-500 h-20">
-            <h1><a href="#" class="w-1/3 lg:text-4xl">Gobinda</a></h1>
-            <ul class="w-1/3 flex items-center justify-evenly">
-                <li><a href="#" class="text-xl">Home</a></li>
-                <li><a href="#" class="text-xl">About</a></li>
-                <li><a href="#" class="text-xl">Contact me</a></li>
-            </ul>
-        </div>
-    </div> -->
-    <main class="lg:w-3/4 w-5/6 h-full m-auto mt-4 mb-4 rounded-xl">
-        <section class="first flex justify-center items-start  ">
-            <div class="left w-1/3 h-full hidden sm:block">
-                <div class="profile flex justify-center items-start ">
-                    <img src="pic.jpg" alt="Profile Picture" class="rounded-full lg:p-4 lg:h-80 lg:w-80 hidden sm:block ">
-                </div>
-            </div>
-            <div class="right lg:w-2/3 lg:h-full p-10">
-                <img src="pic.jpg" alt="Profile Picture" class="rounded-full w-40 h-40 lg:p-4 lg:h-80 lg:w-80 lg:hidden m-4">
-                <h1 class="text-2xl lg:text-5xl text-white text-teal-500 ">Gobinda Prasad</h1>
-                <p class="text-6xl mb-2 text-teal-500 lg:text-8xl text-2xl ">Poudel</p>
-                <span class="text-xl mb-2 text-white lg:text-3xl">I am a <span id="text"></span></span>
-                <p class="text-base mb-2 lg:text-xl text-white mb-6">Hi! I'm Gobinda Prasad Poudel. I'm a beginner front-end developer and freelancer. I'm passionate about learning new technologies and building beautiful websites. I'm also a hard worker and I'm always willing to go the extra mile to get the job done. If you have a project that you need help with, please don't hesitate to contact me.</p>
+<main>
+    <header>
 
-                <a href="cv.docx" class="text-white text-xl p-3 lg:p-4 lg:text-2xl rounded-xl bg-teal-500 hover:bg-teal-700"
-                    download>Download Resume</a>
-            </div>
-        </section>
-        <section class="second w-full mt-7">
-            <div class="lg:pr-20 flex justify-center items-center lg:flex-row lg:flex-wrap flex-col lg:pl-20 ">
-                <!-- <div class="expertise flex justify-center items-start flex-col w-1/2">
-                    <p class="text-teal-500 lg:text-4xl text-2xl">Expertise :</p>
-                    <ul class="text-white list-disc ">
-                        <li class="p-2 lg:text-2xl">HTML</li>
-                        <li class="p-2 lg:text-2xl">CSS</li>
-                        <li class="p-2 lg:text-2xl">JS</li>
-                        <li class="p-2 lg:text-2xl">React</li>
-                    </ul>
-                </div> -->
-                <div class="projects  flex justify-center items-start flex-col lg:w-1/2">
-                    <p class="text-teal-500 lg:text-4xl text-2xl">Expertise</p>
-                    <div class="mb-10 p-2">
-                        <p class="text-white lg:text-2xl text-xl">HTML</p>
-                        <span class="text-gray-500 lg:text-xl">Hyper Text Mark Language</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <p class="text-white lg:text-2xl text-xl">CSS</p>
-                        <span class="text-gray-500 lg:text-xl">Cas Cading Styles Sheet</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <p class="text-white lg:text-2xl text-xl">JS</p>
-                        <span class="text-gray-500 lg:text-xl">Javascript</span>
-                    </div>
-                   <!--  <div class="mb-10 p-2">
-                        <p class="text-white lg:text-2xl text-xl">Nothing</p>
-                        <span class="text-gray-500 lg:text-xl">Project description</span>
-                    </div> -->
-                </div>
-                <div class="education  flex justify-center items-start flex-col lg:w-1/2 w-full ml-7 sm:ml-0">
-                    <p class="text-teal-500 lg:text-4xl text-2xl">Education</p>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">2021</span>
-                        <p class="text-white lg:text-2xl text-xl">Basic Level Examination (BLE)</p>
-                        <span class="text-gray-500 lg:text-xl">Hamro Pahunch Secondary School</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">2023</span>
-                        <p class="text-white lg:text-2xl text-xl">Secondary Education Examination (SEE)</p>
-                        <span class="text-gray-500 lg:text-xl">Hamro Pahunch Secondary School</span>
-                    </div>
-                   <!--  <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Secondary Education Examination (SEE)</p>
-                        <span class="text-gray-500 lg:text-xl">Hamro Pahunch Secondary School</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Secondary Education Examination (SEE)</p>
-                        <span class="text-gray-500 lg:text-xl">Hamro Pahunch Secondary School</span>
-                    </div>
-                    -->
-                </div>
-                <div class="projects  flex justify-center items-start flex-col lg:w-1/2">
-                    <p class="text-teal-500 lg:text-4xl text-2xl">Projects</p>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">2023</span>
-                        <p class="text-white lg:text-2xl text-xl">Basic E-commerce website</p>
-                        <span class="text-gray-500 lg:text-xl">I have built a basic e-commerce website that allows users to buy and sell products online.</span>
-                    </div><!-- 
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Project 2</p>
-                        <span class="text-gray-500 lg:text-xl">Project description</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Project 3</p>
-                        <span class="text-gray-500 lg:text-xl">Project description</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Project 4</p>
-                        <span class="text-gray-500 lg:text-xl">Project description</span>
-                    </div>
-                </div> 
-                <div class="experience  flex justify-center items-start flex-col lg:w-1/2">
-                    <p class="text-teal-500 lg:text-4xl text-2xl">Experience</p>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Experience 1</p>
-                        <span class="text-gray-500 lg:text-xl">Experience description</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Experience 2</p>
-                        <span class="text-gray-500 lg:text-xl">Experience description</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Experience 3</p>
-                        <span class="text-gray-500 lg:text-xl">Experience description</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Experience 4</p>
-                        <span class="text-gray-500 lg:text-xl">Experience description</span>
-                    </div>
-                </div>
+        <h1 class="main-h1" class="main_txt">Gobinda Poudel</h1>
+        <ul>
+            <a href="#">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <!--  <a href="#">About me</a> -->
+        </ul>
 
-                <div class="achievements  flex justify-center items-start flex-col lg:w-1/2">
-                    <p class="text-teal-500 lg:text-4xl text-2xl">Achievements</p>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Achievement 1</p>
-                        <span class="text-gray-500 lg:text-xl">Achievement description</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Achievement 2</p>
-                        <span class="text-gray-500 lg:text-xl">Achievement description</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Achievement 3</p>
-                        <span class="text-gray-500 lg:text-xl">Achievement description</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <span class="text-gray-500">Date</span>
-                        <p class="text-white lg:text-2xl text-xl">Achievement 4</p>
-                        <span class="text-gray-500 lg:text-xl">Achievement description</span>
-                    </div>
-                </div> -->
-                <div class="interests  flex justify-center items-start flex-col lg:w-1/2">
-                    <p class="text-teal-500 lg:text-4xl text-2xl">Interests</p>
-                    
-                    
-
-
-                    <div class="mb-10 p-2">
-                        <p class="text-white lg:text-2xl text-xl"><i class="fas fa-music"></i></p>
-                        <span class="text-gray-500 lg:text-xl">Music</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <p class="text-white lg:text-2xl text-xl"><i class="fas fa-plane"></i></p>
-                        <span class="text-gray-500 lg:text-xl">Travelling</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <p class="text-white lg:text-2xl text-xl"><i class="far fa-futbol"></i></p>
-                        <span class="text-gray-500 lg:text-xl">Playing Sports</span>
-                    </div>
-                    <div class="mb-10 p-2">
-                        <p class="text-white lg:text-2xl text-xl"><i class="fas fa-tools"></i></p>
-                        <span class="text-gray-500 lg:text-xl">Making DIY Projects</span>
-                    </div>
-
-
-
-                </div>
-
-            </div>
-        </section>
-    </main>
-    <footer class="w-full h-60 lg:p-8 ">
-        <div class="flex items-center justify-around flex-col lg:flex-row sm:pb-4 ">
-            <div class="contact flex items-center justify-center flex-col">
-                <p class="lg:text-4xl text-white">Contact</p>
-                <p class="m-1 lg:text-xl text-white">Tulsipur , Dang</p>
-                <p class="m-1 lg:text-xl text-white"><a href="mailto:gobindapoudelofficial@gmail.com">gobindapoudelofficial@gmail.com</a></p>
-                
-            </div>
-            <div class="social flex items-center justify-center flex-col">
-                <p class="lg:text-4xl text-white mt-2">Social Links</p>
-                <a href="https://www.instagram.com/ram0917q/" target="_blank" class="lg:text-xl hover:text-teal-500 text-white lg:mt-2">Instagram</a>
-                <a href="https://github.com/Gobinda-Prasad-Poudel" target="_blank" class="lg:text-xl hover:text-teal-500 text-white lg:mt-2">Github</a>
-                <a href="https://www.linkedin.com/in/gobinda-prasad-poudel-aa9485218/" target="_blank" class="lg:text-xl hover:text-teal-500 text-white lg:mt-2">Linkedin</a>
-                <a href="https://www.upwork.com/freelancers/gobindaprasadp" target="_blank" class="lg:text-xl hover:text-teal-500 text-white lg:mt-2">Upwork</a>
-
+    </header>
+    <section class="main-sec">
+        <div class="item1">
+            <h5>Welcome</h5>
+            <h1 class="main-h1">I am Front-End <span>Web Developer</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio recusandae, quos earum accusamus
+                corporis, ipsum cupiditate maxime itaque animi, praesentium suscipit blanditiis voluptas. Porro non
+                nihil vitae autem deleniti est in velit!</p>
+            <div class="btns">
+                <button class="btn-1">Download CV</button>
+                <button class="btn-2">View Portfolio</button>
             </div>
         </div>
+        <div class="item2">
+            <svg width="464" height="464" viewBox="0 0 464 464" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="44" width="420" height="420" rx="2" fill="#0DB760" />
+                <rect x="3" y="60" width="401" height="401" rx="2" stroke="black" stroke-width="5" />
+            </svg>
+
+        </div>
+
+    </section>
+    <section class="second-sec" id="skills">
+        <div class="main">
+            <h5>My Skills</h5>
+            <h1 class="main-h1">Why Hire Me For Next <span>Project?</span></h1>
+            <p>Hire me for your next project, and you'll get a front-end freelancer who blends creativity and technical
+                expertise seamlessly. With a passion for crafting captivating user experiences and a commitment to
+                delivering pixel-perfect designs, I'll ensure your website stands out in the digital realm. Let's bring
+                your vision to life together.</p>
+        </div>
+        <div class="skills">
+            <div class="icon"><svg class="svgs" viewBox="0 0 512 512">
+                    <g id="XMLID_1568_">
+                        <g id="XMLID_652_">
+                            <path id="XMLID_676_"
+                                d="m482 278h-37.673v-54c0-14.602-10.489-26.795-24.327-29.455v-104.529c0-19.859-16.157-36.016-36.017-36.016h-128.983c-5.522 0-10 4.477-10 10s4.478 10 10 10h128.983c8.832 0 16.017 7.185 16.017 16.016v103.984h-129.667c-16.542 0-30 13.458-30 30v63.228h-220.333v-197.212c0-8.831 7.185-16.016 16.017-16.016h128.983c5.522 0 10-4.477 10-10s-4.478-10-10-10h-128.983c-19.86 0-36.017 16.157-36.017 36.016v229.268c0 19.859 16.157 36.017 36.017 36.017h123.33v36.063c0 19.688-9.953 37.694-26.624 48.168-3.774 2.371-5.523 6.953-4.29 11.235 1.233 4.283 5.152 7.232 9.609 7.232h343.958c16.542 0 30-13.458 30-30v-119.999c0-16.542-13.458-30-30-30zm-211.667-64h143.994c5.514 0 10 4.486 10 10v54h-14.327c-16.542 0-30 13.458-30 30v120c0 3.506.61 6.87 1.72 10h-111.387c-5.514 0-10-4.486-10-10v-204c0-5.514 4.486-10 10-10zm-250.333 105.284v-12.057h220.333v28.073h-70.986-133.33c-8.832.001-16.017-7.184-16.017-16.016zm159.347 72.08v-36.063h60.986v72.699c0 3.506.61 6.87 1.72 10h-78.402c10.071-13.169 15.696-29.427 15.696-46.636zm312.653 36.636c0 5.514-4.486 10-10 10h-72c-5.514 0-10-4.486-10-10v-120c0-5.514 4.486-10 10-10h72c5.514 0 10 4.486 10 10z">
+                            </path>
+                            <path id="XMLID_1626_"
+                                d="m58 114.614c-5.522 0-10 4.477-10 10v112c0 5.523 4.478 10 10 10h88c5.522 0 10-4.477 10-10v-112c0-5.523-4.478-10-10-10zm78 112h-68v-92h68z">
+                            </path>
+                            <path id="XMLID_1627_"
+                                d="m194 134.614h101c5.522 0 10-4.477 10-10s-4.478-10-10-10h-101c-5.522 0-10 4.477-10 10s4.478 10 10 10z">
+                            </path>
+                            <path id="XMLID_1628_"
+                                d="m194 230.61c2.63 0 5.21-1.06 7.069-2.92 1.86-1.87 2.931-4.44 2.931-7.08 0-2.63-1.07-5.21-2.931-7.07-1.859-1.86-4.439-2.93-7.069-2.93s-5.21 1.07-7.07 2.93-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.08c1.86 1.86 4.44 2.92 7.07 2.92z">
+                            </path>
+                            <path id="XMLID_1639_"
+                                d="m194 182.614h37.5c5.522 0 10-4.477 10-10s-4.478-10-10-10h-37.5c-5.522 0-10 4.477-10 10s4.478 10 10 10z">
+                            </path>
+                            <path id="XMLID_1674_"
+                                d="m446 398c-2.63 0-5.21 1.069-7.07 2.93s-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.069c1.86 1.86 4.44 2.931 7.07 2.931s5.21-1.07 7.069-2.931c1.861-1.859 2.931-4.439 2.931-7.069s-1.07-5.21-2.931-7.07c-1.859-1.861-4.439-2.93-7.069-2.93z">
+                            </path>
+                            <path id="XMLID_1677_"
+                                d="m342.33 418c2.63 0 5.21-1.07 7.069-2.931 1.86-1.859 2.931-4.439 2.931-7.069s-1.07-5.21-2.931-7.07c-1.859-1.86-4.439-2.93-7.069-2.93s-5.21 1.069-7.07 2.93-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.069c1.86 1.861 4.44 2.931 7.07 2.931z">
+                            </path>
+                            <path id="XMLID_1681_"
+                                d="m210 74c2.63 0 5.21-1.07 7.069-2.93 1.861-1.86 2.931-4.44 2.931-7.07s-1.07-5.21-2.931-7.07c-1.859-1.86-4.439-2.93-7.069-2.93s-5.21 1.07-7.07 2.93-2.93 4.44-2.93 7.07 1.069 5.21 2.93 7.07 4.44 2.93 7.07 2.93z">
+                            </path>
+                        </g>
+                    </g>
+                </svg></div>
+            <h2>Responsive Designs</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita velit ipsam molestiae corrupti, sequi
+                quasi ipsa placeat fuga cumque dolorum?</p>
+        </div>
+        <div class="skills">
+            <div class="icon">
+                <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <h2>Creative Designs</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita velit ipsam molestiae corrupti, sequi
+                quasi ipsa placeat fuga cumque dolorum?</p>
+        </div>
+        <div class="skills">
+            <div class="icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h2>Clean Code</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita velit ipsam molestiae corrupti, sequi
+                quasi ipsa placeat fuga cumque dolorum?</p>
+        </div>
+        <div class="skills">
+            <div class="icon">
+                <svg class="svgs" height="64px" width="64px" version="1.1" id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 512.00 512.00" xml:space="preserve" transform="rotate(0)" stroke="#000000"
+                    stroke-width="0.00512">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M502.082,27.274H9.918C4.441,27.274,0,31.714,0,37.191v120.252c0,5.477,4.441,9.918,9.918,9.918h492.165 c5.477,0,9.918-4.441,9.918-9.918V37.191C512,31.714,507.559,27.274,502.082,27.274z M330.383,147.525H19.835V47.109h310.547 V147.525z M492.165,147.525H350.218V47.109h141.947V147.525z">
+                                    </path>
+                                    <path
+                                        d="M407.245,125.831c8.855,0,16.897-3.527,22.811-9.243l25.54,14.735c1.562,0.901,3.265,1.329,4.946,1.329 c3.429,0,6.764-1.78,8.601-4.964c2.737-4.744,1.111-10.809-3.635-13.546l-25.999-14.999c0.381-1.998,0.588-4.058,0.588-6.164 c0-18.115-14.738-32.852-32.852-32.852s-32.852,14.738-32.852,32.852S389.13,125.831,407.245,125.831z M407.245,79.961 c7.178,0,13.017,5.839,13.017,13.017s-5.839,13.017-13.017,13.017s-13.017-5.839-13.017-13.017S400.067,79.961,407.245,79.961z">
+                                    </path>
+                                    <path
+                                        d="M51.448,107.855h111.574c5.477,0,9.918-4.441,9.918-9.918c0-5.477-4.441-9.918-9.918-9.918H51.448 c-5.477,0-9.918,4.441-9.918,9.918C41.53,103.414,45.971,107.855,51.448,107.855z">
+                                    </path>
+                                    <path
+                                        d="M205.172,107.855h83.061c5.477,0,9.918-4.441,9.918-9.918c0-5.477-4.441-9.918-9.918-9.918h-83.061 c-5.477,0-9.918,4.441-9.918,9.918C195.254,103.414,199.695,107.855,205.172,107.855z">
+                                    </path>
+                                    <path
+                                        d="M163.022,250.421c5.477,0,9.918-4.441,9.918-9.918c0-5.477-4.441-9.918-9.918-9.918H51.448 c-5.477,0-9.918,4.441-9.918,9.918c0,5.477,4.441,9.918,9.918,9.918H163.022z">
+                                    </path>
+                                    <path
+                                        d="M288.232,250.421c5.477,0,9.918-4.441,9.918-9.918c0-5.477-4.441-9.918-9.918-9.918h-83.061 c-5.477,0-9.918,4.441-9.918,9.918c0,5.477,4.441,9.918,9.918,9.918H288.232z">
+                                    </path>
+                                    <path
+                                        d="M12.397,230.586c-2.616,0-5.17,1.054-7.017,2.901s-2.901,4.401-2.901,7.017s1.054,5.17,2.901,7.017 s4.413,2.901,7.017,2.901c2.616,0,5.17-1.054,7.017-2.901s2.901-4.401,2.901-7.017s-1.054-5.17-2.901-7.017 S15.013,230.586,12.397,230.586z">
+                                    </path>
+                                    <path
+                                        d="M497.124,280.174H45.869c-5.477,0-9.918,4.441-9.918,9.918c0,5.477,4.441,9.918,9.918,9.918h451.254 c5.477,0,9.918-4.441,9.918-9.918C507.041,284.615,502.601,280.174,497.124,280.174z">
+                                    </path>
+                                    <path
+                                        d="M497.124,314.886H45.869c-5.477,0-9.918,4.441-9.918,9.918s4.441,9.918,9.918,9.918h451.254 c5.477,0,9.918-4.441,9.918-9.918S502.601,314.886,497.124,314.886z">
+                                    </path>
+                                    <path
+                                        d="M163.022,400.426c5.477,0,9.918-4.441,9.918-9.918s-4.441-9.918-9.918-9.918H51.448c-5.477,0-9.918,4.441-9.918,9.918 s4.441,9.918,9.918,9.918H163.022z">
+                                    </path>
+                                    <path
+                                        d="M288.232,400.426c5.477,0,9.918-4.441,9.918-9.918s-4.441-9.918-9.918-9.918h-83.061c-5.477,0-9.918,4.441-9.918,9.918 s4.441,9.918,9.918,9.918H288.232z">
+                                    </path>
+                                    <path
+                                        d="M12.397,380.591c-2.603,0-5.17,1.054-7.017,2.901c-1.847,1.847-2.901,4.401-2.901,7.017s1.054,5.17,2.901,7.017 s4.413,2.901,7.017,2.901s5.17-1.054,7.017-2.901s2.901-4.401,2.901-7.017c0-2.616-1.054-5.17-2.901-7.017 C17.567,381.645,15.013,380.591,12.397,380.591z">
+                                    </path>
+                                    <path
+                                        d="M497.124,430.179H45.869c-5.477,0-9.918,4.441-9.918,9.918s4.441,9.918,9.918,9.918h451.254 c5.477,0,9.918-4.441,9.918-9.918S502.601,430.179,497.124,430.179z">
+                                    </path>
+                                    <path
+                                        d="M497.124,464.891H45.869c-5.477,0-9.918,4.441-9.918,9.918c0,5.477,4.441,9.918,9.918,9.918h451.254 c5.477,0,9.918-4.441,9.918-9.918C507.041,469.332,502.601,464.891,497.124,464.891z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <h2>SEO-friendly Designs</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita velit ipsam molestiae corrupti, sequi
+                quasi ipsa placeat fuga cumque dolorum?</p>
+        </div>
+
+    </section>
+    <section class="third-sec" id="projects">
+        <div class="main">
+            <h5>My Portfolio</h5>
+            <h1 class="main-h1">Latest <span>Projects</span></h1>
+            <p>I have selected and mentioned here some of my latest projects to share with you.</p>
+            <button class="btn-1">See More</button>
+        </div>
+        <div class="projects">
+            <img src="images/App Landing Page 3.png" alt="Project 1">
+        </div>
+        <div class="projects">
+            <img src="images/Furniture E-commerce Website UIUX Design 1.png" alt="Project 2">
+        </div>
+        <!--  <div class="projects">
+            <img src="images/Restaurant landing page 1.png" alt="Project 3">
+        </div> -->
+
+    </section>
+    <section class="contact" id="contact">
+        <h5>Contact</h5>
+        <h1 class="main-h1">Let’s Discuss Your <span>Project</span></h1>
+        <p>Let’s make something new, different and more meaningful or make thing more visual or conceptual</p>
+        <div class="contact-info-form">
+            <div class="left">
+                <p>You can contact me and also give feed back about your experience </p>
+                <div>
+                    <svg class="sv" width="40" height="40" viewBox="0 0 56 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 12C0 5.37258 5.37258 0 12 0H44C50.6274 0 56 5.37258 56 12V44C56 50.6274 50.6274 56 44 56H12C5.37258 56 0 50.6274 0 44V12Z"
+                            fill="#0DB760" />
+                        <path
+                            d="M16.625 21.875C16.625 31.5397 24.4603 39.375 34.125 39.375H36.75C37.4462 39.375 38.1139 39.0984 38.6062 38.6062C39.0984 38.1139 39.375 37.4462 39.375 36.75V35.1493C39.375 34.5473 38.9655 34.0223 38.381 33.8765L33.2208 32.5862C32.7075 32.4578 32.1685 32.6503 31.8523 33.0727L30.7207 34.5812C30.3917 35.0198 29.8235 35.2135 29.309 35.0245C27.399 34.3223 25.6645 33.2134 24.2256 31.7744C22.7866 30.3355 21.6777 28.601 20.9755 26.691C20.7865 26.1765 20.9802 25.6083 21.4188 25.2793L22.9273 24.1477C23.3508 23.8315 23.5422 23.2913 23.4138 22.7792L22.1235 17.619C22.0525 17.3351 21.8887 17.0832 21.6581 16.9031C21.4274 16.723 21.1433 16.6251 20.8507 16.625H19.25C18.5538 16.625 17.8861 16.9016 17.3938 17.3938C16.9016 17.8861 16.625 18.5538 16.625 19.25V21.875Z"
+                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p> Call Me : </p>
+                    <h4>+981020304050</h4>
+                </div>
+                <div>
+                    <svg class="sv" width="40" height="40" viewBox="0 0 56 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 12C0 5.37258 5.37258 0 12 0H44C50.6274 0 56 5.37258 56 12V44C56 50.6274 50.6274 56 44 56H12C5.37258 56 0 50.6274 0 44V12Z"
+                            fill="#0DB760" />
+                        <path
+                            d="M39.375 21.875V34.125C39.375 34.8212 39.0984 35.4889 38.6062 35.9812C38.1139 36.4734 37.4462 36.75 36.75 36.75H19.25C18.5538 36.75 17.8861 36.4734 17.3938 35.9812C16.9016 35.4889 16.625 34.8212 16.625 34.125V21.875M39.375 21.875C39.375 21.1788 39.0984 20.5111 38.6062 20.0188C38.1139 19.5266 37.4462 19.25 36.75 19.25H19.25C18.5538 19.25 17.8861 19.5266 17.3938 20.0188C16.9016 20.5111 16.625 21.1788 16.625 21.875M39.375 21.875V22.1585C39.375 22.6067 39.2604 23.0474 39.0418 23.4387C38.8233 23.83 38.5083 24.1588 38.1267 24.3938L29.3767 29.778C28.9627 30.033 28.4861 30.168 28 30.168C27.5139 30.168 27.0373 30.033 26.6233 29.778L17.8733 24.395C17.4917 24.16 17.1767 23.8311 16.9582 23.4398C16.7396 23.0486 16.625 22.6078 16.625 22.1597V21.875"
+                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p>Mail me : </p>
+                    <h4><a href="mailto:abc@mnop.com">abc@mnop.com</a></h4>
+                </div>
+
+
+            </div>
+            <div class="right">
+                <!-- <form action="http://postmail.invotes.com/send" method="post" id="email_form">
+
+
+
+
+
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea name="text" id="" cols="30" rows="10" placeholder="Message"></textarea>
+
+                    <input type="hidden" name="nnjmgrqkb7a2ku0yrp9e913y" value="abc123" />
+
+                    <input type="hidden" name="success_url" value="." />
+                    <input type="hidden" name="error_url" value=".?err=1" />
+
+                </form> -->
+
+
+
+
+                <form action="https://postmail.invotes.com/send" method="post" id="email_form">
+                    <input type="text" name="extra_full_name" placeholder="Full Name" />
+                    <input type="text" name="subject" placeholder="Subject" />
+                    <input type="number" name="extra_phone_number" placeholder="Phone Number" />
+                    <input type="email" name="extra_email" placeholder="E-mail" />
+                    <textarea name="text" placeholder="Message"></textarea>
+                    <input type="hidden" name="access_token" value="nnjmgrqkb7a2ku0yrp9e913y" />
+                    <input type="hidden" name="success_url" value=".#mesage_sent_successfully" />
+                    <input type="hidden" name="error_url" value=".#message_not_sent" />
+
+                    <button id="submit_form" type="submit" value="Send" class="btn-1">Submit</button>
+
+                </form>
+                <script>
+                    var submitButton = document.getElementById("submit_form");
+                    var form = document.getElementById("email_form");
+                    form.addEventListener("submit", function (e) {
+                        setTimeout(function () {
+                            submitButton.value = "Sending...";
+                            submitButton.disabled = true;
+                        }, 1);
+                    });
+                </script>
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="links">
+            <p>Links:</p>
+
+
+
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+
+
+        </div>
+        <div class="copyright"> &copy; Copyright : Gobinda Poudel </div>
+        <div class="top-btn"><a href="#"><box-icon name='up-arrow-alt' ></box-icon></a></div>
+
     </footer>
 
-    <script>
-        const words = [
 
-            "Frontend Developer",
-            "Freelancer"
-        ];
+</main>
+<div class="msg">
+    <h1>Responsiveness uder construction for mobile devices</h1>
+    <p class="msg">Apologies for the inconvenience! Our team is currently working diligently to enhance the responsiveness of our website for mobile devices. During this construction phase, you may experience some layout adjustments to ensure optimal viewing and user experience on smartphones and tablets. We appreciate your patience and understanding, and we look forward to providing you with an improved mobile-friendly website soon!</p>
 
-        let currentWordIndex = 0;
-        let currentWord = "";
-        let isDeleting = false;
-        let typingSpeed = 200; /
-        let delayTime = 200; 
-        let textElement = document.getElementById("text");
+</div>
+    <!-- <div class="swiper">
+    
+    <div class="swiper-wrapper">
+  
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
 
-        function type() {
-            const fullWord = words[currentWordIndex];
+    
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <div class="swiper-pagination"></div>
+    
+  </div>
+ -->
 
-            if (isDeleting) {
-                currentWord = fullWord.substring(0, currentWord.length - 1);
-            } else {
-                currentWord = fullWord.substring(0, currentWord.length + 1);
-            }
 
-            textElement.innerHTML = currentWord;
 
-            if (!isDeleting && currentWord === fullWord) {
-                isDeleting = true;
-                typingSpeed = delayTime;
-            } else if (isDeleting && currentWord === "") {
-                isDeleting = false;
-                currentWordIndex++;
-                typingSpeed = 200;
-                if (currentWordIndex === words.length) {
-                    currentWordIndex = 0;
-                }
-            }
+    <!-- Swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-            setTimeout(type, typingSpeed);
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(type, delayTime);
-        });
-    </script>
+    <!-- Scripts .js -->
+    <script src="scripts.js"></script>
 </body>
 
 </html>
