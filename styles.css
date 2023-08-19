@@ -429,7 +429,7 @@ img {
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     grid-gap: 10px;
     padding: 0 40px;
@@ -628,6 +628,26 @@ footer .links i {
     margin: 0 10px;
 }
 
+/* Project Detail */
+.container_pd{
+    width: 100%;
+    padding:  40px;
+}
+.imagesOfProjects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imagesOfProjects img{
+    margin: 10px 0;
+    border: 1px solid var(--bg-color);
+    border-radius: 10px;
+    
+}
+.buttton{
+    margin: 0 0 20px 0;
+}
 /* Media Queries */
 
 
