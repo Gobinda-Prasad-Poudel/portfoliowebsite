@@ -114,12 +114,12 @@ header a:hover::after {
     z-index: 20;
     top: -100%;
     transition: top 0.5s;
-    
+
 }
 
 .mobile-navigation.active {
     top: 78px;
-    
+
 }
 
 .nav-icons .fa-bars {
@@ -416,7 +416,8 @@ img {
         background: var(--black-300);
     }
 }
-.mobile-show{
+
+.mobile-show {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
@@ -629,25 +630,29 @@ footer .links i {
 }
 
 /* Project Detail */
-.container_pd{
+.container_pd {
     width: 100%;
-    padding:  40px;
+    padding: 40px;
 }
-.imagesOfProjects{
+
+.imagesOfProjects {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.imagesOfProjects img{
+
+.imagesOfProjects img {
     margin: 10px 0;
     border: 1px solid var(--bg-color);
     border-radius: 10px;
-    
+
 }
-.buttton{
+
+.buttton {
     margin: 0 0 20px 0;
 }
+
 /* Media Queries */
 
 
@@ -750,7 +755,7 @@ footer .links i {
         width: 100%;
         margin: 0;
         outline: none;
-        
+
 
     }
 
@@ -765,7 +770,7 @@ footer .links i {
 
     .main_txt_smscreen {
         display: unset;
-        
+
     }
 
     .nav-icons {
@@ -811,15 +816,16 @@ footer .links i {
     }
 
     /* Certificates */
-    .certificates{
-        padding: 2px;
+    .certificates {
+        padding: 10px;
     }
-    .slider-section{
+
+    .slider-section {
         display: none;
 
     }
-    
-    .mobile-show{
+
+    .mobile-show {
         display: unset;
         padding: 0;
     }
