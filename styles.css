@@ -480,9 +480,36 @@ img {
     width: 100%;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1.5fr;
+    /* grid-template-columns: 1fr 1.5fr; */
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 
+}
+
+.u_l{
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    color: var(--secondary-bg-color);
+    cursor: pointer;
+    transition: all 2s;
+}
+.u_l:active{
+    transform: scale(0.8);
+}
+#upwork_link p {
+    margin:10px;
+}
+#upwork_link{
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    margin:10px;
+    padding: 30px;
+    border-radius: 20px;
+
+}
+.u-m{
+    margin: 10px 0 0 0 ;
 }
 
 
@@ -510,10 +537,11 @@ img {
     grid-row: 1 / -1;
 
 }
-.right{
-    display:none;
+.right h1{
+    text-align: center;
 }
 
+/* 
 .right form {
     display: grid;
     grid-template-rows: 1fr 1fr 5fr;
@@ -559,7 +587,7 @@ form textarea:focus {
 
 form button {
     width: 120px;
-}
+} */
 
 
 /* Footer */
