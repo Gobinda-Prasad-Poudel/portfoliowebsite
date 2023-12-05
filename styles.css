@@ -36,6 +36,9 @@
     --black-500: hsl(210, 20%, 1%);
 
 }
+main{
+    display:none;
+}
 
 a {
     text-decoration: none;
